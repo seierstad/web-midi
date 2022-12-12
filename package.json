@@ -1,0 +1,32 @@
+{
+  "name": "web-midi",
+  "version": "0.0.1",
+  "description": "common web MIDI stuff for reuse in different projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seierstad/web-midi.git"
+  },
+  "keywords": [
+    "MIDI"
+  ],
+  "author": "Erik E. Seierstad",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/seierstad/web-midi/issues"
+  },
+  "homepage": "https://github.com/seierstad/web-midi#readme",
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-plugin-react": "^7.31.11",
+    "serve": "^14.1.2"
+  },
+  "dependencies": {
+    "es-module-shims": "^1.6.2",
+    "htm": "^3.1.1",
+    "preact": "^10.11.3"
+  }
+}
