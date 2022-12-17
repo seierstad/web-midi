@@ -62,7 +62,7 @@ function App (props) {
         <main>
             <h1>Web MIDI</h1>
             <${Midi} dispatch=${dispatch} state=${state.midi} />
-            ${incomingMessages.length > 0 ? incomingMessages.map(({data}, index) => html`<div key=${index}>${Array.from(data).map(byte => hexString(byte)).join("-")}</div>`) : null}
+            ${incomingMessages.length > 0 ? incomingMessages.map(({data}, index) => html`<div key=${index}>${Array.from(data).map(byte => hexString(byte).padStart(2, "0")).join("-")}</div>`) : null}
             ${(outputs && outputs[0] && outputs[0].port.connection === "open") ? html`
             	<Fragment>
             	    <${Transport} port=${outputs[0].port} />
