@@ -110,6 +110,7 @@ const sameId = (arr, id) => arr.find(element => element.id === id);
 
 function Midi (props) {
     const {state, dispatch = () => null} = props;
+    const {inputs = [], outputs = []} = state;
     const [accessRequested, setAccessRequested] = useState(false);
     const [access, setAccess] = useState(null);
     const [accessError, setAccessError] = useState(null);
@@ -168,7 +169,7 @@ function Midi (props) {
         <${MidiAvailability} dispatch=${dispatch}>
             <section id="midi">
                 <header><h2>MIDI</h2></header>
-                ${state.inputs.map(port => html`<span>${port.id} - ${port.name}</span>`)}
+                ${inputs.map(port => html`<span>${port.id} - ${port.name}</span>`)}
                 ${access !== null ? html`
                     <fieldset>
                         <legend>inputs</legend>
