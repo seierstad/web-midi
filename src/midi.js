@@ -109,7 +109,7 @@ const sameId = (arr, id) => arr.find(element => element.id === id);
 
 
 function Midi (props) {
-    const {state, dispatch = () => null} = props;
+    const {state = {}, dispatch = () => null} = props;
     const {inputs = [], outputs = []} = state;
     const [accessRequested, setAccessRequested] = useState(false);
     const [access, setAccess] = useState(null);
